@@ -1,14 +1,15 @@
 # redis_bench
 
-> the project import `youzan` [有赞], just to make myself more comfortable.
+> project import youzan, made some adjustments, just make it easier to use.
 
 redis benchmark tool by golang
 
 ### Usage
 
-help
-
 ```
+> go run bench.go -h
+
+help:
   -c int
     	number of clients (default 100)
   -ip string
@@ -35,9 +36,12 @@ help
     	kv value size (default 100)
 ```
 
-cmd stdout:
+### How to run
 
 ```
+> go build bench.go
+> ./bench
+
 set: 1.970729428s 19.707 micros/op, 50742.63op/s
 get: 1.642698759s 16.427 micros/op, 60875.43op/s
 randget: 1.702335425s 17.023 micros/op, 58742.83op/s
